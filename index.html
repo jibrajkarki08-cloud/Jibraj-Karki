@@ -1,0 +1,524 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080d1b">
+  <meta name="description" content="Jibraj Karki — Graphic Designer, Content Creator and Video Editor from Nepal.">
+  <title>Jibraj Karki | Portfolio</title>
+
+  <style>
+    :root {
+      --bg: #080d1b;
+      --card: #111a2e;
+      --text: #f5f7ff;
+      --muted: #aab5cc;
+      --blue: #3b82f6;
+      --red: #ff4b5c;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1100px, 90%);
+      margin: auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(8, 13, 27, .94);
+      border-bottom: 1px solid #263047;
+    }
+
+    nav {
+      min-height: 75px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: 900;
+      letter-spacing: -1px;
+    }
+
+    .logo span { color: var(--red); }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover { color: white; }
+
+    .hero {
+      min-height: 85vh;
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      align-items: center;
+      gap: 50px;
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+
+    .badge {
+      display: inline-block;
+      border: 1px solid #294675;
+      background: #101e39;
+      color: #93c5fd;
+      border-radius: 30px;
+      padding: 6px 14px;
+      font-size: 13px;
+    }
+
+    h1 {
+      font-size: clamp(45px, 7vw, 78px);
+      line-height: 1.12;
+      letter-spacing: -3px;
+      margin: 22px 0;
+    }
+
+    .gradient {
+      background: linear-gradient(100deg, #60a5fa, #c4b5fd, #ff6578);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero p, .section-description {
+      color: var(--muted);
+      font-size: 17px;
+      max-width: 620px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 21px;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: .25s;
+    }
+
+    .btn:hover { transform: translateY(-3px); }
+
+    .primary {
+      background: linear-gradient(110deg, var(--blue), #6548d8, var(--red));
+      color: white;
+    }
+
+    .secondary {
+      border: 1px solid #39445c;
+      background: #111827;
+    }
+
+    .profile {
+      width: min(300px, 100%);
+      aspect-ratio: 4 / 5;
+      margin: auto;
+      border-radius: 28px;
+      border: 1px solid #35415c;
+      background: linear-gradient(145deg, #1d3761, #572538);
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      box-shadow: 0 25px 80px #0008;
+    }
+
+    .profile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .initials {
+      font-size: 80px;
+      font-weight: 900;
+      color: #fff;
+    }
+
+    section { padding: 85px 0; }
+
+    .section-label {
+      color: #7eb5ff;
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 3px;
+    }
+
+    h2 {
+      font-size: clamp(30px, 5vw, 45px);
+      line-height: 1.2;
+      margin: 10px 0 18px;
+      letter-spacing: -1px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: .7fr 1.3fr;
+      gap: 22px;
+      margin-top: 32px;
+    }
+
+    .card {
+      background: linear-gradient(145deg, #131e35, #0e1526);
+      border: 1px solid #28334a;
+      border-radius: 20px;
+      padding: 28px;
+    }
+
+    .stat {
+      font-size: 58px;
+      font-weight: 900;
+      background: linear-gradient(110deg, #60a5fa, #ff6578);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .muted { color: var(--muted); }
+
+    .about-copy p { margin-bottom: 16px; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 32px;
+    }
+
+    .icon {
+      font-size: 28px;
+      background: #1d2c49;
+      width: 55px;
+      height: 55px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 20px;
+    }
+
+    .card h3 { margin-bottom: 10px; }
+
+    .values {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      margin-top: 32px;
+    }
+
+    .value-number {
+      color: #7eb5ff;
+      font-size: 12px;
+      letter-spacing: 2px;
+      font-weight: bold;
+    }
+
+    .quote {
+      margin-top: 25px;
+      padding: 25px;
+      border-left: 3px solid var(--red);
+      background: #ffffff08;
+      border-radius: 0 15px 15px 0;
+      font-size: 19px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .contact-link {
+      display: block;
+      margin-top: 13px;
+      padding: 14px;
+      border: 1px solid #303b51;
+      border-radius: 10px;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-link:hover { border-color: var(--blue); }
+
+    footer {
+      border-top: 1px solid #263047;
+      padding: 25px 0;
+      color: var(--muted);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    @media (max-width: 800px) {
+      .hero, .about-grid, .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero { text-align: center; }
+      .hero p { margin: auto; }
+      .buttons { justify-content: center; }
+      .profile { max-width: 250px; }
+      .grid { grid-template-columns: 1fr; }
+      .values { grid-template-columns: repeat(2, 1fr); }
+      .nav-links { gap: 12px; font-size: 13px; }
+    }
+
+    @media (max-width: 480px) {
+      nav { align-items: flex-start; padding: 15px 0; }
+      .nav-links { flex-wrap: wrap; justify-content: flex-end; }
+      .values { grid-template-columns: 1fr; }
+      h1 { letter-spacing: -2px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="container">
+      <a class="logo" href="#home">JIBRAJ<span>.</span></a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#values">Values</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container" id="home">
+      <div>
+        <span class="badge">Creative Professional · Nepal</span>
+        <h1>Hi, I'm<br><span class="gradient">Jibraj Karki.</span></h1>
+        <p>
+          Graphic Designer, Content Creator and Video Editor.
+          I love turning ideas into engaging visual stories.
+          I believe in creativity, consistency and continuous growth.
+        </p>
+        <div class="buttons">
+          <a class="btn primary" href="#contact">Let's Connect ↗</a>
+          <a class="btn secondary" href="#about">Discover My Story ↓</a>
+        </div>
+      </div>
+
+      <div class="profile">
+        <img
+          src="https://1drv.ms/i/c/5acad788bb2753c6/IQDD8JC185jbSo8gjcNQf4IfATRI3UoNZV1kwU2pQxZYK6w?e=CeGPR5"
+          alt="Jibraj Karki"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
+        >
+        <span class="initials" style="display:none">JK</span>
+      </div>
+    </section>
+
+    <section class="container" id="about">
+      <span class="section-label">About Me</span>
+      <h2>Built from curiosity.<br><span class="gradient">Driven by creativity.</span></h2>
+      <p class="section-description">
+        My journey is proof that you don't need a perfect beginning
+        to build something meaningful.
+      </p>
+
+      <div class="about-grid">
+        <div class="card">
+          <div class="stat">55K+</div>
+          <h3>YouTube Subscribers</h3>
+          <p class="muted">
+            A community built through learning, consistency and content creation.
+          </p>
+        </div>
+
+        <div class="card about-copy">
+          <p>
+            I'm Jibraj Karki, a creative professional from Kathmandu, Nepal,
+            working in graphic design, video editing and digital content creation.
+          </p>
+          <p>
+            I began my YouTube journey at a young age, starting with limited
+            equipment and little editing experience. Step by step, I learned
+            how to create videos, communicate ideas and connect with an audience.
+          </p>
+          <p>
+            Today, with a community of more than 55,000 subscribers, I continue
+            to develop my creative skills and explore new opportunities.
+            My goal is to create work that is useful, engaging and memorable.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" id="services">
+      <span class="section-label">What I Do</span>
+      <h2>Ideas into impact.</h2>
+      <p class="section-description">
+        Creative skills that help communicate ideas clearly and effectively.
+      </p>
+
+      <div class="grid">
+        <article class="card">
+          <div class="icon">✳</div>
+          <h3>Graphic Design</h3>
+          <p class="muted">
+            Social media graphics, banners, promotional materials
+            and creative visual designs.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="icon">▶</div>
+          <h3>Content Creation</h3>
+          <p class="muted">
+            Researching, planning and presenting informative
+            content that connects with audiences.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="icon">✂</div>
+          <h3>Video Editing</h3>
+          <p class="muted">
+            Turning raw footage into engaging videos through
+            pacing, storytelling and visual editing.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container" id="values">
+      <span class="section-label">My Principles</span>
+      <h2>My Core Values.</h2>
+      <p class="section-description">
+        The principles I aim to bring to every project and collaboration.
+      </p>
+
+      <div class="values">
+        <article class="card">
+          <span class="value-number">01 / DISCIPLINE</span>
+          <h3>Consistency</h3>
+          <p class="muted">Small improvements create lasting progress.</p>
+        </article>
+
+        <article class="card">
+          <span class="value-number">02 / CHARACTER</span>
+          <h3>Integrity</h3>
+          <p class="muted">Be honest, respectful and responsible.</p>
+        </article>
+
+        <article class="card">
+          <span class="value-number">03 / GROWTH</span>
+          <h3>Curiosity</h3>
+          <p class="muted">Keep learning, improving and exploring.</p>
+        </article>
+
+        <article class="card">
+          <span class="value-number">04 / PURPOSE</span>
+          <h3>Meaningful Work</h3>
+          <p class="muted">Create things that provide real value.</p>
+        </article>
+      </div>
+
+      <div class="quote">
+        "Start with what you have, learn as you go,
+        and keep moving forward."
+      </div>
+    </section>
+
+    <section class="container" id="contact">
+      <span class="section-label">Get In Touch</span>
+      <h2>Let's create something<br><span class="gradient">meaningful together.</span></h2>
+      <p class="section-description">
+        For creative collaborations, design projects, video editing
+        or simply to say hello, feel free to reach out.
+      </p>
+
+      <div class="contact-grid">
+        <div class="card">
+          <h3>Let's Talk</h3>
+          <p class="muted">
+            I'm always interested in meeting creative people,
+            learning new things and exploring meaningful opportunities.
+          </p>
+          <br>
+          <a class="btn primary" href="mailto:jibrajkarki2006@gmail.com">
+            Email Me ↗
+          </a>
+        </div>
+
+        <div class="card">
+          <h3>Contact Details</h3>
+          <a class="contact-link" href="mailto:jibrajkarki2006@gmail.com">
+            ✉ jibrajkarki2006@gmail.com
+          </a>
+          <a class="contact-link"
+             href="https://www.facebook.com/karkijibraj"
+             target="_blank" rel="noopener noreferrer">
+            Facebook Profile ↗
+          </a>
+          <div class="contact-link">📍 Kathmandu, Nepal</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Jibraj Karki. All rights reserved.</p>
+      <a href="#home">Back to Top ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    // Update copyright year automatically.
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    // Smooth scrolling for internal navigation.
+    document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+      link.addEventListener("click", function(event) {
+        const target = document.querySelector(link.getAttribute("href"));
+
+        if (target) {
+          event.preventDefault();
+          target.scrollIntoView({ behavior: "smooth" });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
